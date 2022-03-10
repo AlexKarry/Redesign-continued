@@ -1,12 +1,24 @@
 function clickHandlers(event) {
   if (event.target.matches("#pull")) {
-    showMenu();
+    showMenu(event);
     event.preventDefault();
   }
   if (event.target.matches(".content-video a")) {
     videoSwitch(event);
     event.preventDefault();
   }
+  if (event.target.matches(".image-tn img")) {
+    runCarousel(event);
+    event.preventDefault();
+  }
+}
+
+function runCarousel(event) {
+  const imageHref = event.target.parentNode.getAttribute("href");
+  const titleText = event.target.title;
+  document.querySelector("figure img").setAttribute("src", imageHref);
+  // document.querySelector("figure img").src = imageHref;
+  document.querySelector("figcaption").innerHTML = titleText;
 }
 
 function showMenu() {
