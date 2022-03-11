@@ -188,4 +188,54 @@ nav .active a {
   padding: 0.5rem;
 }
 
+form {
+  padding: 2em 0;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 1em;
+  font: inherit;
+}
+
+button {
+  padding: 6px;
+  border: 1px solid #007eb6;
+  background-color: #007eb6;
+  color: #fff;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 15px #83d9ff;
+}
+
+input:required,
+textarea:required {
+  background-color: #e9f8ff;
+}
+
+input:valid,
+textarea:valid {
+  background-color: #b3ffb3;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  background-color: #ffcccc;
+}
+
 /*# sourceMappingURL=styles.css.map */
